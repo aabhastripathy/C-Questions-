@@ -1,0 +1,254 @@
+ Q) 1: Rotate Array Elements
+#include <iostream>
+#include <cmath>
+#include <string>
+int main(){
+int arr[5] = {1, 2, 3, 4, 5} ;
+int size = 5;
+int temp = arr[0];
+
+for(int i = 1;i < 5;i++)
+    {
+        arr[i-1] = arr[i];
+    }
+arr[size - 1] = temp;
+for(int i=0;i<size;i++)
+  {
+  	cout<<"\narr["<<i<<"] :"<<arr[i];
+  }  
+}
+
+
+
+
+    Q)2: Merge Two Arrays
+#include <iostream>
+#include <cmath>
+#include <string>
+int main(){
+int size_1 = 3;
+int size_2 = 3;
+int size_3 = 6;
+int arr_1[3] = {1,2,3};
+int arr_2[3] = {4,5,6};
+int arr_3[6];
+for(int i = 0;i<size_3;i++)
+    {
+        if(i<size_1)
+            {
+                arr_3[i] = arr_1[i];
+            }
+        else 
+            {
+                arr_3[i] = arr_2[i - size_1];
+            }
+    }
+    for(int i = 0;i<size_3;i++)
+        {
+            cout<<"\n arr["<<i<<"] :"<<arr_3[i];
+        }
+}
+
+
+
+    Q) 3: Reverse an Array
+
+#include <iostream>
+#include <cmath>
+#include <string>
+int main(){
+int i,j,temp;
+int arr[5] = {1,2,3,4,5};
+int size = 5;
+for( i = 0,j = size-1;i<size && j>=0;i++,j--)
+    {
+        if(i == j)
+            {
+                break;
+            }
+        else
+        {
+            temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+        
+    }
+
+for(i  = 0; i< size ;i++)
+    {
+        cout<<"\narr["<<i<<"] :"<<arr[i];
+    }
+}
+
+
+
+
+
+    Q)4: Find Second Largest Element
+#include <iostream>
+#include <cmath>
+#include <string>
+int main(){
+int arr[5] = {10,5,8,20,15};
+int size = 5;
+int second_largest = -1;
+int largest = arr[0];
+
+for(int i = 0; i < size;i++)
+    {
+        if(arr[i] > largest)
+            {
+                second_largest = largest;
+                largest = arr[i];
+            }
+        else if(arr[i] < largest && arr[i] > second_largest)
+            second_largest = arr[i];
+    }
+    cout<<second_largest;
+}
+
+
+
+
+
+
+
+
+
+
+
+    Q) 5: Count Occurrences
+ #include <iostream>
+#include <cmath>
+#include <string>
+int main(){   
+int num,count=0;
+cout<<"Enter the number you want to count {1,2,5,2,8,2} :"<<endl;
+cin>>num;
+int arr[6] = {1,2,5,2,8,2};
+int size = 6;
+for(int i = 0; i < size;i++)
+    {
+        if(arr[i] == num )
+        count++;
+    }
+cout<<"Count of "<<num<<" is "<<count;
+}
+
+
+
+
+
+
+
+
+
+    Q)3: Count Words in a String
+#include <iostream>
+#include <cmath>
+#include <string>
+int main(){
+string line;
+  int count_word=1;
+  cout<<"Enter data:";
+  getline(cin,line);
+  for(int i=0;line[i]!='\0';i++)
+  {
+  	     if(line[i]==' ')
+  		    count_word++;
+  }
+  	
+cout<<"The total number of words are : "<<count_word;
+
+
+}  
+
+
+
+
+
+
+
+
+
+	Q)2 check Anagram 
+#include<iostream>
+using namespace std;
+int main()
+{
+  string line;
+  int i,j,count=0,k;
+  string word1;
+  string word2;
+  cout<<"Enter word1:";
+  cin>>word1;
+  cout<<"\nEnter word2:";
+  cin>>word2;
+  for(k=0;word1[k]!='\0';k++);
+  for(i=0;word1[i]!='\0';i++){
+    for(j=0;word2[j]!='\0';j++){
+      if(word1[i]==word2[j]){
+        count++;
+        //cout<<count;
+      }
+    }
+  }if(count==k){
+    cout<<"Anagram";
+  }else{
+    cout<<"Not Anagram";
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4th Question: Toggle Case of Characters
+
+#include<iostream>
+using namespace std;
+int main()
+{
+  string line;
+  int i,j,count=0,k;
+  string word1;
+  string word2;
+  cout<<"Enter word1:";
+  cin>>word1;
+  cout<<"\nEnter word2:";
+  cin>>word2;
+  for(k=0;word1[k]!='\0';k++);
+  for(i=0;word1[i]!='\0';i++){
+    for(j=0;word2[j]!='\0';j++){
+      if(word1[i]==word2[j]){
+        count++;
+        //cout<<count;
+      }
+    }
+  }if(count==k){
+    cout<<"Anagram";
+  }else{
+    cout<<"Not Anagram";
+  }
+
+
+}
